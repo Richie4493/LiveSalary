@@ -1,0 +1,49 @@
+/*======================================
+=            INFO CONTAINER            =
+======================================*/
+.settings-container{width: 100%; position: relative}
+.settings-container span{font-size: 20px;float: right;margin-top: 5px;}
+.info-container.container,
+.info-container.container .container{display: none}
+.info-container.container.active{display: block}
+/*=====  End of INFO CONTAINER  ======*/
+
+
+/*==============================
+=            FOOTER            =
+==============================*/
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.footer .switcher-view {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.switcher-view .glyphicon {
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.switcher-view {
+  position: relative;
+}
+
+/*=====  End of FOOTER  ======*/

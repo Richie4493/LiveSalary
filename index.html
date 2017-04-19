@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="js/main.js">
+    </script>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+</head>
+<body>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalData">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;
+                        </span>
+                    </button>
+                    <h4 class="modal-title">Inserisci il tuo stipendio e le ore di lavoro
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="salary">Stipendio
+                        </label>
+                        <div class="col-md-5">
+                            <input id="salary" name="salary" type="number" placeholder="Es. 1200" class="form-control input-md" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="workHour">Ore di lavoro
+                        </label>
+                        <div class="col-md-5">
+                            <input id="workHour" name="workHour" type="number" placeholder="Es. 8" class="form-control input-md" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="workMonths">Mensilità spettanti
+                        </label>
+                        <div class="col-md-5">
+                            <input id="workMonths" name="workMonths" type="number" min="0" max="14" placeholder="Es. 13" class="form-control input-md" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary save-change" data-dismiss="modal">Salva
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container settings-container">
+        <span class="settings glyphicon glyphicon-cog">
+        </span>
+    </div>
+    <div class="info-container container active" id="salary-day">
+        <h3>Calcolo stipendio su 24h
+        </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio annuo:
+                    </p>
+                    <div class="result col-xs-12 form-control year-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio giornaliero:
+                    </p>
+                    <div class="result col-xs-12 form-control day-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio all'ora:
+                    </p>
+                    <div class="result col-xs-12 form-control hour-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio al minuto:
+                    </p>
+                    <div class="result col-xs-12 form-control minute-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio al secondo:
+                    </p>
+                    <div class="result col-xs-12 form-control second-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 js-live-salary">
+                    <p>Fino ad ora hai guadagnato € 
+                        <span class="js-actual-salary">
+                        </span> su € 
+                        <span class="js-day-salary">
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-container container" id="salary-work-day">
+        <h3>Calcolo stipendio su 
+            <span class="js-work-hour">
+            </span>h
+        </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio annuo:
+                    </p>
+                    <div class="result col-xs-12 form-control year-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio giornaliero:
+                    </p>
+                    <div class="result col-xs-12 form-control day-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio all'ora:
+                    </p>
+                    <div class="result col-xs-12 form-control hour-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio al minuto:
+                    </p>
+                    <div class="result col-xs-12 form-control minute-salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Stipendio al secondo:
+                    </p>
+                    <div class="result col-xs-12 form-control second-salary">
+                    </div>
+                </div>
+            </div>
+<!-- 
+<div class="row">
+<div class="col-xs-12">
+<div class="result col-xs-12 js-live-salary">
+<p>Fino ad ora hai guadagnato € 
+<span class="js-actual-salary">
+</span> su € 
+<span class="js-day-salary">
+</span>
+</p>
+</div>
+</div>
+</div> -->
+</div>
+</div>
+<footer class="container footer">
+    <div class="row">
+        <div class="col-xs-6">
+            <a class="switcher-view btn btn-primary" href="#salary-day">
+                <span class="glyphicon glyphicon-piggy-bank">
+                </span>
+            </a>
+            <p>Retribuzione su 24h
+            </p>
+        </div>
+        <div class="col-xs-6">
+            <a class="switcher-view btn btn-primary" href="#salary-work-day">
+                <span class="glyphicon glyphicon-stats">
+                </span>
+            </a>
+            <p>Retribuzione su 
+                <span class="js-work-hour">
+                </span>h
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

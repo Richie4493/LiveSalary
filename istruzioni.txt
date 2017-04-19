@@ -1,0 +1,5 @@
+Stipendio annuo = stipendio * 12 : numero mensilità
+Stipendio giornaliero = stipendio / giorni lavorativi
+Stipendio ad ora = stipendio giornaliero / ore nel giorno :  ore di lavoro
+Stipedio a minuto = stipendio ad ora / minuti
+Stipendio a secondo = stipendio a minuto / secondi
